@@ -1,0 +1,13 @@
+{
+  "_readme": "最小可用配置：只改三项。其余全部走 Config.DEFAULTS（见 config.example.json / docs/CONFIG.md）。",
+  "_usage": "python -m layered_memory --config config/minimal.json --root ./bot-memory init",
+  "budget": {
+    "context_max_chars": 4000
+  },
+  "cue": {
+    "default_k": 5
+  },
+  "privacy": {
+    "alias": {"私下称呼": "xiaobei"}
+  }
+}

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "layered-memory"
+version = "1.0.0"
+description = "可单独接入机器人的分层记忆系统：浅层/深层/事实层/意识层，零第三方依赖"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "professorkun" }]
+keywords = ["agent", "memory", "chatbot", "forgetting-curve", "long-term-memory"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.scripts]
+layered-memory = "layered_memory.cli:main"
+
+[tool.setuptools]
+packages = ["layered_memory"]

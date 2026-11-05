@@ -8,7 +8,7 @@
 配完整的衰减打分、筛选、存储、检索、巩固、淘汰、内存回收，以及好感度与情绪的对接规范。
 
 **零第三方依赖**（Python 3.10+ 标准库）、**全部参数公开**在 `config.example.json`、
-**29 项测试** + 三个端到端示例 + GitHub Actions 多版本 CI。
+**29 项测试** + 三个端到端示例 + 多版本 CI 示例配置（`docs/ci-workflow-example.yml`）。
 
 ---
 
@@ -130,7 +130,9 @@ python -m unittest discover -s tests -v     # 29 项，约 0.6 秒
 python examples/quickstart.py               # 末尾 8/8 内置自测
 ```
 
-CI 在 Python 3.10 / 3.11 / 3.12 / 3.13 上跑全量测试 + 三个示例 + 内置自测。
+CI 示例在 Python 3.10 / 3.11 / 3.12 / 3.13 上跑全量测试 + 三个示例 + 内置自测。
+把 `docs/ci-workflow-example.yml` 复制到 `.github/workflows/tests.yml` 即启用
+（通过 API 创建 workflow 文件需要 `workflow` 权限，第一次建议在网页端添加）。
 
 ## 性能瓶颈与内存控制（摘要，完整版见 PERFORMANCE.md）
 

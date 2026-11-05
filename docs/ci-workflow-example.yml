@@ -1,0 +1,33 @@
+# GitHub Actions 示例配置（不直接放在 .github/workflows/ 下）
+#
+# 用法：把本文件复制到仓库的 `.github/workflows/tests.yml` 即可启用 CI。
+# 说明：通过 GitHub API 创建/修改 workflow 文件需要 token 具备 `workflow` scope；
+#       若当前凭据只有 `repo` 权限，请在仓库网页端手动添加本文件，
+#       或执行 `gh auth refresh -s workflow` 后重新授权（会打开浏览器，需本人确认）。
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  unittest:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run unittest suite
+        run: python -m unittest discover -s tests -v
+      - name: End-to-end examples
+        run: |
+          python examples/quickstart.py
+          python examples/adapter.py
+          python examples/affect_demo.py
+      - name: Built-in self-test
+        run: python -m layered_memory --root ./ci-memory init && python -m layered_memory --root ./ci-memory self-test

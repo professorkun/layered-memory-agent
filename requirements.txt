@@ -1,0 +1,7 @@
+# 运行期依赖：无。
+# 本项目只用 Python 3.10+ 标准库（dataclasses / json / re / pathlib / unittest / math）。
+# 不需要 pip install 任何东西；若你的部署流程强制要求 requirements.txt，保留本文件即可。
+#
+# 可选（仅开发期，非必需）：
+#   ruff            # 静态检查
+#   pytest          # 也可直接 python -m unittest

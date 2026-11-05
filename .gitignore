@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# 运行数据（不要提交真实记忆）
+bot-memory/
+demo-data/
+my-bot-memory/
+*.tmp-*
+*.log
+out/
+backups/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 本地配置（含别名、隐私词表）
+config/local.json
