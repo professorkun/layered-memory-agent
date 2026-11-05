@@ -20,7 +20,14 @@
   本仓库在 `decay.py` 里给出那条曲线的完整实现，并把它当作其中一层来用。
 - 发布前核查过 GitHub 上的既有仓库（`proactive-messaging-agent` 是主动消息、
   `qq-group-chat-gate` 是群聊门闸、`csdn-blog-publishing-skill` 是发布工具），
-  **没有同主题仓库**，因此本仓库为新建，不是重复开坑。两篇内容是按序阅读的关系。
+  **没有分层记忆主题仓库**，因此本仓库为新建，不是重复开坑。
+- 同日另有一个 [`memory-forgetting-engine`](https://github.com/professorkun/memory-forgetting-engine)
+  发布，主题是**遗忘引擎**（六变量、幂律长尾、触景、可信度），只覆盖本项目的
+  **事件层内部算法**，不含分层 / 生长 / 意识层内容。两者主题不同、互为配套：
+  它讲「一条记忆怎么淡」，本仓库讲「记忆分成哪些层、层之间怎么流动」。
+  按「不同主题不复用仓库」处理：既不覆盖它，也不把它的代码复制过来；
+  本仓库的 `decay.py` 是同一套公式的独立精简实现。三份内容按序阅读：
+  CSDN 旧文 → `memory-forgetting-engine` → 本仓库。
 
 ---
 
